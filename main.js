@@ -1,41 +1,10 @@
-/*import kaboom from "kaboom";
-import { createObstacle } from "./obstacles"; 
-import { createPlatforms } from "./platforms"; 
-import { createEnemies } from "./enemies"; 
-import { createJumper } from "./jumper"; 
-import { createPlayer } from "./player"; 
-import { setupPlayerEvents } from "./player.js";
-import { createLevel1 } from "./level1.js";
-
-kaboom();
-loadFont("arcade", "./PressStart2P-Regular.ttf")
-setGravity(2400)
-
-//loadSprite("bean", "sprites/bean.png");
-loadSprite("player1", "Tiles/Transparent/tile_0300.png");
-loadSprite("ghosty", "sprites/ghosty.png");
-loadSprite("gazer", "sprites/gazer.png");
-loadSprite("spike", "sprites/spike.png");
-loadSprite("bomb", "sprites/bomb.png");
-loadSprite("jumpy", "sprites/jumpy.png");
-
-let player = createPlayer("player1", 100, -60);
-setupPlayerEvents(player);
-createEnemies(250, "gazer", 300, 500, 40, 40, 50, 500);
-createEnemies(100, "ghosty", 900, 400, 60, 60, 800, 1100);
-createPlatforms(0, 500, 700, 30);
-createPlatforms(750, 400, 500, 30);
-createPlatforms(50, 250, 150, 30);
-createPlatforms(150, 1000, 1000, 30);
-createPlatforms(1250, 1020, 2000, 30);
-createObstacle("bomb", 1030, 1000);
-createObstacle("spike", 300, 1000);
-createJumper("jumpy", 750, 1000);
-*/
 import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs";
 kaboom();
 loadFont("arcade", "./PressStart2P-Regular.ttf");
-setGravity(2400);
+/*setGameProps({
+    timestep: 1/120, // Default è 1/60, prova con 1/120 o 1/180
+});*/
+setGravity(1200);
 
 loadSound("jump", "sounds/jump.mp3");
 loadSound("jumpover", "sounds/jumpOver.mp3");
@@ -48,7 +17,7 @@ loadSound("laser", "sounds/laser.mp3");
 // Riproduce in loop
 const music = play("soundtrack", {
     loop: true,
-    volume: 0,
+    volume: 3.0,
 })
 
 
